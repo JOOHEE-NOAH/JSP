@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function init(){
+		for(var i=0 ; i<=9; i++) 
+			hi();  /* init()을 호출하면 hi()를 9번 호출함 */
+	}
+	function hi(){
+		document.write("대박나세요<br>");
+		document.write("대박 복 터졌다 <p>")
+	}
+</script>
+<body > <!-- onload: 바디가 준비가 되면 init()를 부르세요 -->
+	<button onclick="init()">나를 누르세요</button> <!-- onclik을 누르면 init()가 호출 -->
+</body>
+</html>

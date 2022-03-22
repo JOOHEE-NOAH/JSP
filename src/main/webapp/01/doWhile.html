@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	var a;
+	do{ /* 원하는 값이 얻을 때까지 계속하는게 dowhile노래 */
+		a=prompt("보고싶은 구구단은 몇 단?");
+	}while(a<2||a>9 ||isNaN(a));
+	for(var i=1; i<=9; i++)
+	document.write(a+ "*" + i + "=" + (a*i) + "<br>");
+
+</script>
+<body>
+	
+</body>
+</html>
