@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+	<input type="text" id="parentInput"></input><p>
+	<script type="text/javascript">
+		var parentInput =document.getElementById("parentInput")
+		var message;
+		function init(){
+			var time = setInterval(function(){
+									var date = new Date();
+									var hour = date.getHours();
+									var min = date.getMinutes();
+									var sec = date.getSeconds();
+									//document.write(hour + "시 " + min + "분 " + sec + "초" +"<br>");
+									//document.clear;
+									message = hour + "시"+min+"분"+sec+"초";
+									parentInput.value = message;
+									},1000);
+						setTimeout(function(){ //시계 멈추게 하는것 없으면 정말 시계처럼 흘러감
+							clearInterval(time);
+						},11000)
+		}
+	</script>
+	
+</body>
+</html>

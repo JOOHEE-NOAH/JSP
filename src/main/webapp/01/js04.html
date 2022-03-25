@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	a= 7;
+	b= "대박";
+	var c = 1.56;
+	var d = '5분';
+	let e = 'eee분';
+	document.write("정수a : " + a + "<p>");
+	document.write("문자b : " + b + "<br>");
+	document.write("실수c : " + c + "<br>");
+	document.write("문자d : " + d + "<br>");
+	document.write("문자e : " + e + "<br>");
+
+	function varTest() {/* var는 또 선언해도 같은 변수로 인식 */
+		var x = 1; 
+		if(true){
+			var x= 2;	//같은 변수!
+			alert(x);	//2
+		}
+		alert(x);	//2
+	}
+	function letTest() {/* var는 또 선언하면 다른 변수로 인식 */
+		let x = 1; 
+		if(true){
+			let x= 2;//다른 변수
+			alert(x);//2
+		}
+		alert(x);//1
+	}
+	
+</script>
+</head>
+<body>
+	<button onclick="varTest()"> varTest()</button>
+	<button onclick="letTest()"> letTest()</button>
+</body>
+</html>

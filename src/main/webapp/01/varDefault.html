@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function foo() {
+		var x = "foo";//함수 내 전역
+		alert("foo : " +x);
+	}
+	function bar() {
+		x = "bar";//전역변수 처럼
+		alert("bar : " +x);
+	}
+	foo();
+	bar();
+	console.log("global : " +x); /*  공개하지 않고싶을때 사용. 구현화면에서 -> 검사->console에서 확인 가능  */
+</script>
+<body>
+
+</body>
+</html>

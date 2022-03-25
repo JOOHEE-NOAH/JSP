@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var banner = new Array();
+	for (var i=0 ; i<7 ; i++){
+		banner[i] = "../images/"+i+".jpg";
+			/* 0  --> 0.jpg
+			   1  --> 1.jpg */
+	}
+	var ran = Math.floor(Math.random()*7); //random:7이하의 임의의 숫자 floor:인수로 전달받은 값과 같거나 작은 수중에서 가장 큰 정수를 반환
+	document.write("<img src="+banner[ran]+">");
+</script>
+</head>
+<body>
+
+</body>
+</html>

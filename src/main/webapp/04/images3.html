@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+	function chk(num){
+	//	alert ("chk call->"+num)
+		document.images[0].src = "../images/"+num+".gif";
+	}
+	
+</script>
+<body>
+	<center>
+	<img alt="3" src="../images/3.gif"><p>
+	<img alt="4" src="../images/4.gif"><p>
+	<button onmouseover="chk(1)"> 목마</button>
+	<button onmouseover="chk(2)"> 우체통</button>
+	<button onmouseover="chk(3)"> 불자동차</button>
+	</center>
+</body>
+</html>

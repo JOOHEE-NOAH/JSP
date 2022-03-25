@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+   function chk(){
+      if(!frm.id.value){
+         alert("이름 ?");
+         frm.id.focus;
+         return false;
+      }
+      if(!frm.pass.value){
+         alert("암호 ?");
+         frm.pass.focus;
+         return false;
+      }
+      return true;
+   }
+</script>
+</head>
+<body>
+<h2>로그인</h2>
+<!-- onsubmit="return chk()" 이게 있어야 위문장 Check -->
+<form action="http://www.daum.net" name="frm" onsubmit="return chk()"> <!-- return 붙이면 false 나오면 머물러있음 -->
+   <table border="1" bgcolor="yellow">
+      <tr><td>아이디</td><td><input type="text"     name="id"></td></tr>
+      <tr><td>암호</td><td><input type="password"  name="pass"></td></tr>
+      <tr><td> <input type="submit" value="확인"></td>
+         <td> <input type="reset" value="취소"></td>
+      </tr>
+   </table>
+</form>
+</body>
+</html>

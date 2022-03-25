@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+function chk() {
+	var str = "내가 좋아하는 영화는 \n";
+	for (var i =0; i< frm.movie.length; i++){
+		if (frm.movie[i].selected){
+			str +=frm.movie[i].value;
+			break;
+		}
+	}
+	alert(str);
+}
+</script>
+<body>
+<h2>좋아하는 영화는</h2>
+<form name="frm">
+<select name="movie" onchange="chk()"> <!-- 값이 바뀌면 chk호출 -->
+		<option value="배트맨">배트맨</option>
+		<option value="스파이더">스파이더맨</option>
+		<option value="슈퍼맨">슈퍼맨</option>
+		<option value="호빵맨" selected="selected">호빵맨</option>
+		<option value="그린맨">그린맨</option>
+</select><p>
+<input type="button" value="확인" onclick="chk()"> <!-- 클릭하면 chk호출 -->
+</form>
+</body>
+</html>

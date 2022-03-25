@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+	<script type="text/javascript">
+		function changeColor() {
+		var selectedItem = document.getElementsByName("first");// name 속상값이 "first"인 모든 요소
+		var selectedIdItem = document.getElementById("id3");// id 속성값이 "id3"인 모든 요소
+		/* 
+			p first
+			ul li first
+		*/
+		for(var i = 0; i< selectedItem.length; i++){
+			selectedItem.item(i).style.color = "red";  //선택된 이름의 모든 요소의 텍스트 색상
+		}
+		selectedIdItem.style.backgroundColor = "orange";
+		}
+</script>
+<body>
+	<h1>name 속성을 이용한 선택</h1>
+	<p name="first">첫 번째 단락이에요!</p>
+	<ul>
+		<li name="first" > 첫 번째 아이템이에요!</li>
+		<li> 두 번째 아이템이에요!</li>
+		<li id="id3"> 세 번째 아이템이에요!</li>
+		<li> 네 번째 아이템이에요!</li>
+		<li id = "id5"> 다섯 번째 아이템이에요!</li> 
+	</ul>
+	<button onclick="changeColor()"> first 색상 변하기</button>
+	
+	
+</body>
+</html>

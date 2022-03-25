@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var man = {name :'김준수' ,age:38, addr:"드라큐라"};
+	//Append
+	man.phone = "01022223333";
+	//Delete
+	delete(man.addr);
+	
+	/* name:김준수
+	age: 38
+	addr: 드라큐라
+	 */
+	for(var key in man) document.write(key+":"+man[key]+"<br>");
+</script>
+</head>
+<body>
+
+</body>
+</html>

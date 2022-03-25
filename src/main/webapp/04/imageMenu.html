@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	overImg = new Array();  //over images
+	outImg = new Array();	// out images
+	for (var i =0; i<4 ; i++){ // 실제 이미지 삽입
+		overImg[i]="../images/"+i+"over.jpg";
+		outImg[i]="../images/"+i+"out.jpg";
+	//	prImg[i]="../images/"+i+"pr.jpg";
+	}
+	function ov(num) { 
+		document.images[num].src=overImg[num];
+		// 위의 document.images[num]의 이미지는 body에 있는 img를 의미한다. 
+		//이때 [num]은 배열인데 우리가 선언해 주지 않았어도 body에서 라인순서대로 0,1,2...로 값이 넘어간다.
+	}
+	function op(num) { //지금은 의미 없음
+	      alert("onmousedown")
+	      document.images[num].src="../images/"+num+".jpg";
+	   }
+	function ot(num) {
+		document.images[num].src=outImg[num];
+	}
+</script>
+</head>
+<body> <!--  1먼저 이미지 뿌려놓고 --> 
+	<img src="../images/0out.jpg" onmouseover="ov(0)" onmouseout="ot(0)" 
+								  onclick="op(0)"><p>
+	<img src="../images/1out.jpg" onmouseover="ov(1)" onmouseout="ot(1)"><p>
+	<img src="../images/2out.jpg" onmouseover="ov(2)" onmouseout="ot(2)"><p>
+	<img src="../images/3out.jpg" onmouseover="ov(3)" onmouseout="ot(3)"><p>
+
+</body>
+</html>
